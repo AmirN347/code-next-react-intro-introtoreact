@@ -39,7 +39,7 @@ export const Events = () => {
 const useLineDrawnTo = (canvas, x, y, active) => {
   const ctx = useCtx(canvas, x, y, active);
 
-  const [isDrawing, setIsDrawing] = useState(false)
+  const [isDrawing, setIsDrawing] = useState(false);
 
   useEffect(() => {
     if (active && ctx) {
