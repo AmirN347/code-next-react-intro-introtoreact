@@ -24,10 +24,10 @@ const State1 = () => {
   return (
     <div>
       State1: {foos.join(', ')}
-
       <br />
-
-      <button className="btn btn-primary" onClick={addFoo}>Add foo</button>
+      <button className="btn btn-primary" onClick={addFoo}>
+        Add foo
+      </button>
     </div>
   );
 };
@@ -36,19 +36,19 @@ const State1 = () => {
 // Why do you think this happens?
 // Fix this component.
 const State2 = () => {
-  let count = 0;
+  const [count, setCount] = useState(0);
 
-  const increment = () => {
-    count++;
+  const inc = () => {
+    setCount(count + 1);
   };
 
   return (
     <div>
       State2: {count}
-
       <br />
-
-      <button className="btn btn-primary" onClick={increment}>increment</button>
+      <button className="btn btn-primary" onClick={inc}>
+        increment
+      </button>
     </div>
   );
 };
